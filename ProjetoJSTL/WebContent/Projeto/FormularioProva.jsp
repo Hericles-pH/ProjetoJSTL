@@ -3,15 +3,23 @@
 <!DOCTYPE html>
 <html>
 	<head>
-    <link rel="stylesheet" href="Styles//styleLogin.css">
 		<meta charset="ISO-8859-1">
-		<title>Login</title>
+		<title>Insert title here</title>
 	</head>
 	<body>
-<div id="login">
 
+		<div class="container">
+			<div>
+				<ul>
+					<li><p><b>Eduaro Felipe de Souza<b></p></li>
+					<li><p><b>Hericles Peixer<b></p></li>
+					<li><p><b>Leonardo Gabriel Giacomozzi<b></p></li>
+				</ul>
+				<p></p>
+				<p></p>
+			</div>
 			<form action="" method="post">
-		        <div class="container">
+		        <div class="">
 		          <label for="user.name"><b>Usuario</b></label>
 		          <input type="text" placeholder="Nome de usuario" name="user.name" required>
 
@@ -20,7 +28,6 @@
 		          <button type="submit">Entrar</button>
 		        </div>
 			</form>
-
-      </div>
+		</div>
 	</body>
 </html>
