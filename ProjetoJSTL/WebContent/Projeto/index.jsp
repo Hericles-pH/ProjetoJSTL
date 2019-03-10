@@ -10,13 +10,13 @@
 	<body>
 <div id="login">
 
-			<form action="" method="post">
+			<form action="Controller/Login.jsp" method="post">
 		        <div class="container">
 		          <label for="user.name"><b>Usuario</b></label>
-		          <input type="text" placeholder="Nome de usuario" name="user.name" required>
+		          <input type="text" placeholder="Nome de usuario" name="usuario" required>
 
 		          <label for="user.senha"><b>Password</b></label>
-		          <input type="password" placeholder="Digite sua senha" name="user.senha" required>
+		          <input type="password" placeholder="Digite sua senha" name="senha" required>
 		          <button type="submit">Entrar</button>
 		        </div>
 			</form>

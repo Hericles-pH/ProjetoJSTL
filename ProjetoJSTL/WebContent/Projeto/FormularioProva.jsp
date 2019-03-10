@@ -17,21 +17,21 @@
 					<li><p>Eduaro Felipe de Souza</p></li>
 					<li><p>Hericles Peixer</p></li>
 					<li><p>Leonardo Gabriel Giacomozzi</p></li>
-					<li><p><fmt:formatDate type = "both" 
-         				dateStyle = "short" timeStyle = "short" value = "${now}"/></p></li>
 				</ul>
-				
+				<fmt:formatDate type = "both" var="hora"
+         				dateStyle = "short" timeStyle = "short" value = "${now}"/>
 			</div>
 			<form action="" method="post">
 		        <div class="">
-		          <label for="prova.hash"><b>Codigo Hash</b></label>
-		          <input type="text" placeholder="Nome de usuario" name="prova.hash" required maxlength="32">
+		        <input type="text" disabled value="${hora}" name="data"><br>	
+		          <label for="prova.hash"><b>Codigo Hash</b></label><br>
+		          <input type="text" placeholder="Nome de usuario" name="hash" required maxlength="32">
 					<br>
 		          <label ><b>Prova</b></label><br>
-		          <textarea placeholder="Complete com as questões da prova" name="prova.qustoes" required  maxlength="64"></textarea>
+		          <textarea placeholder="Complete com as questões da prova" name="qustoes" required  maxlength="64"></textarea>
 		          <br>
 		          <label ><b>Observações</b></label><br>
-		          <textarea placeholder="Descreva as suas observações" name="prova.qustoes" required  maxlength="64"></textarea>
+		          <textarea placeholder="Descreva as suas observações" name="observacoes" required  maxlength="64"></textarea>
 		          <br>
 		          <button type="submit">Entrar</button>
 		        </div>
