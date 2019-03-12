@@ -12,22 +12,22 @@
 
 </head>
 <body>
-	<sql:setDataSource var="conect" driver="com.mysql.jdbc.Driver"
+	<sql:setDataSource var="connect" driver="com.mysql.jdbc.Driver"
 		url="jdbc:mysql://localhost:3306/jstl?useSSL=true&serverTimezone=America/Sao_Paulo"
 		user="root" password="hericles" />
 
-	<sql:query var="qryObs" dataSource="${ conect }">
+	<sql:query var="qryComents" dataSource="${ connect }">
 	select a.date_hora, a.comentarios, b.usuario from conteudoprova a, loginprova b where a.loginProva_cd_log = b.cd_log;
 </sql:query>
 
-	<c:forEach var="obs" items="${ qryObs.rows }">
+	<c:forEach var="coments" items="${ qryComents.rows }">
 		<div class="container">
 			<div class="media">
 				<div class="media-body">
 					<h4 class="media-heading">
-						${ obs.usuario } <small><i>Posted on February <fmt:formatDate value="${ obs.date_hora }"/> </i></small>
+						${ coments.usuario } <small><i>Posted on February <fmt:formatDate value="${ coments.date_hora }"/> </i></small>
 					</h4>
-					<p>${ obs.comentarios }</p>
+					<p>${ coments.comentarios }</p>
 				</div>
 			</div>
 		</div>
