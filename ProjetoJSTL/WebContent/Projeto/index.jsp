@@ -4,7 +4,9 @@
 
 <html>
 <head>
-<link href="https://fonts.googleapis.com/css?family=Noticia+Text|Orbitron" rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css?family=Noticia+Text|Orbitron"
+	rel="stylesheet">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <!-- jQuery library -->
@@ -22,21 +24,23 @@
 		<div id="logincentral">
 			<h1>Prova JSTL</h1>
 			<form action="Controller/Login.jsp" method="post">
-			<div class="form-group" id="central">
-				
-				<div class="input-group">
-					<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-					<input type="text"  class="form-control" placeholder="Usuário" name="usuario" required>
+				<div class="form-group" id="central">
+					<div class="input-group">
+						<span class="input-group-addon"><i
+							class="glyphicon glyphicon-user"></i></span> <input type="text"
+							class="form-control" placeholder="Usuário" name="usuario"
+							required>
+					</div>
 				</div>
-			</div>
-			<div class="form-group">
-				<div class="input-group">
-					<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-					<input type="password" class="form-control" placeholder="Senha" name="senha" required>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon"><i
+							class="glyphicon glyphicon-lock"></i></span> <input type="password"
+							class="form-control" placeholder="Senha" name="senha" required>
+					</div>
 				</div>
-			</div>
-			<button type="submit">Entrar</button>
-		</form>
+				<button type="submit">Entrar</button>
+			</form>
 		</div>
 	</div>
 </body>

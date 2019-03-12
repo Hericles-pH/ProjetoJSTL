@@ -1,41 +1,90 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+	pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="ISO-8859-1">
-		<title>Insert title here</title>
-		<jsp:useBean id="now" class="java.util.Date" />
-	
-	</head>
-	<body>
+<head>
+<link
+	href="https://fonts.googleapis.com/css?family=Noticia+Text|Orbitron"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="Styles//styleProva.css">
+<meta charset="ISO-8859-1">
+<title>Prova JSTL</title>
+<jsp:useBean id="now" class="java.util.Date" />
 
-		<div class="container">
-			<div>
-				<ul>
-					<li><p>Eduaro Felipe de Souza</p></li>
-					<li><p>Hericles Peixer</p></li>
-					<li><p>Leonardo Gabriel Giacomozzi</p></li>
-				</ul>
-				<fmt:formatDate type = "both" var="hora"
-         				dateStyle = "short" timeStyle = "short" value = "${now}"/>
+</head>
+<body>
+	<div class="container">
+		<form action="" method="post">
+			<div id="conteudoProva">
+				<h1>Prova JSTL</h1>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">Aluno 1</span> <input type="text"
+							name="hash" required maxlength="32" class="form-control" disabled
+							value="Eduardo Felipe de Souza">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">Aluno 2</span> <input type="text"
+							name="hash" required maxlength="32" class="form-control" disabled
+							value="Hericles Peixer">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">Aluno 3</span> <input type="text"
+							name="hash" required maxlength="32" class="form-control" disabled
+							value="Leonardo Gabriel Giacomozzi">
+					</div>
+				</div>
+				<fmt:formatDate type="both" var="hora" dateStyle="short"
+					timeStyle="short" value="${now}" />
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">Data/Hora Servidor</span> <input
+							type="text" disabled value="${hora}" name="data"
+							class="form-control"><br>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">Código HASH</span> <input
+							type="text" name="hash" required maxlength="32"
+							class="form-control">
+					</div>
+				</div>
 			</div>
-			<form action="" method="post">
-		        <div class="">
-		        <input type="text" disabled value="${hora}" name="data"><br>	
-		          <label for="prova.hash"><b>Codigo Hash</b></label><br>
-		          <input type="text" placeholder="Nome de usuario" name="hash" required maxlength="32">
-					<br>
-		          <label ><b>Prova</b></label><br>
-		          <textarea placeholder="Complete com as questões da prova" name="qustoes" required  maxlength="64"></textarea>
-		          <br>
-		          <label ><b>Observações</b></label><br>
-		          <textarea placeholder="Descreva as suas observações" name="observacoes" required  maxlength="64"></textarea>
-		          <br>
-		          <button type="submit">Entrar</button>
-		        </div>
-			</form>
-		</div>
-	</body>
+			<div id="conteudoProva2">
+				<h1>Conteúdo da Prova</h1>
+				<div class="form-group">
+					<textarea name="qustoes" required maxlength="64"
+						class="form-control" placeholder="Digite a prova aqui..."></textarea>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">Observações</span>
+						<textarea name="observacoes" required maxlength="64"
+							class="form-control"></textarea>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<button class="form-control" type="submit">Enviar</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
 </html>
