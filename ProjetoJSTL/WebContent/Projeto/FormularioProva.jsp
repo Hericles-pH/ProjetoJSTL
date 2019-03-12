@@ -24,7 +24,7 @@
 </head>
 <body>
 	<div class="container">
-		<form action="" method="post">
+		<form action="../Controller/TesteComentarios.jsp" method="post">
 			<div id="conteudoProva">
 				<h1>Prova JSTL</h1>
 				<div class="form-group">
@@ -75,7 +75,8 @@
 					<div class="input-group">
 						<span class="input-group-addon">Observações</span>
 						<textarea name="observacoes" required maxlength="64"
-							class="form-control"></textarea>
+							class="form-control">
+						</textarea>
 					</div>
 				</div>
 				<div class="form-group">

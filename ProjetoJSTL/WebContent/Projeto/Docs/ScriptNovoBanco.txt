@@ -1,0 +1,41 @@
+CREATE SCHEMA IF NOT EXISTS jstl DEFAULT CHARACTER SET utf8 ;
+USE jstl ;
+
+-- -----------------------------------------------------
+-- Table `mydb`.`loginProva`
+-- ----------------------------------------------------
+CREATE TABLE loginProva (
+  `cd_log` INT NOT NULL AUTO_INCREMENT,
+  `usuario` VARCHAR(45) NOT NULL,
+  `senha` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`cd_log`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`conteudoProva`
+-- -----------------------------------------------------
+CREATE TABLE conteudoProva (
+  `cd_cont` INT NOT NULL AUTO_INCREMENT,
+  `hashcode` VARCHAR(32) NOT NULL,
+  `questoesProva` VARCHAR(64) NOT NULL,
+  `date_hora` DATE NULL,
+  `comentarios` VARCHAR(64) NULL,
+  `img` BLOB NULL,
+  `loginProva_cd_log` INT NOT NULL,
+  PRIMARY KEY (`cd_cont`),
+  INDEX `fk_conteudoProva_loginProva_idx` (`loginProva_cd_log` ASC) VISIBLE,
+  CONSTRAINT `fk_conteudoProva_loginProva`
+    FOREIGN KEY (`loginProva_cd_log`)
+    REFERENCES `jstl`.`loginProva` (`cd_log`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+insert into loginprova (usuario, senha) values ("Danton", "123");
+insert into loginprova (usuario, senha) values ("Hericles", "123");
+insert into loginprova (usuario, senha) values ("Leonardo", "123");
+insert into loginprova (usuario, senha) values ("Eduardo", "123");
+
+insert into conteudoprova (hashcode, questoesProva, date_hora, comentarios, loginProva_cd_log) values ("dsadsadas2","dsadsa",'20190312',"Tu é foda",1);
