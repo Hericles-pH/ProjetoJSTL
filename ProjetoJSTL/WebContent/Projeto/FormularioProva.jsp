@@ -68,8 +68,8 @@
 			<div id="conteudoProva2">
 				<h1>Conteúdo da Prova</h1>
 				<div class="form-group">
-					<textarea name="qustoes" required maxlength="64"
-						class="form-control" placeholder="Digite a prova aqui..."></textarea>
+					<textarea name="questoes" required maxlength="64"
+						class="form-control" rows="20" placeholder="Digite a prova aqui..."></textarea>
 				</div>
 				<div class="form-group">
 					<div class="input-group">
