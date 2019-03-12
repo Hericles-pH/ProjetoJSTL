@@ -11,26 +11,19 @@
 
 </head>
 <body>
-
 	<sql:setDataSource var="conect" driver="com.mysql.jdbc.Driver"
-		url="jdbc:mysql://localhost:3306/JSTL?useSSL=true&serverTimezone=America/Sao_Paulo"
-		user="root" password="hericles" scope="session"/>
-	<sql:query dataSource="${conect}" var="result" >
-		SELECT * FROM USUARIOS WHERE LOGIN = ?
-		<sql:param 	value="${param.usuario}"/>
+		url="jdbc:mysql://localhost:3306/jstl?useSSL=true&serverTimezone=America/Sao_Paulo"
+		user="root" password="hericles" scope="session" />
+	<sql:query dataSource="${conect}" var="result">
+		SELECT * FROM loginprova WHERE Usuario = ?
+		<sql:param value="${param.usuario}" />
 	</sql:query>
-	
-
-	<c:set var="ao" value="${param.senha}"/>
-	<c:forEach var = "row" items = "${result.rows}">
-			
-			<c:if test="${row.senha == param.senha}">
-				<c:redirect url="../FormularioProva.jsp"></c:redirect>
-			</c:if>
-
+	<c:set var="ao" value="${param.senha}" />
+	<c:forEach var="row" items="${result.rows}">
+		<c:if test="${row.senha == param.senha}">
+			<c:redirect url="../FormularioProva.jsp"></c:redirect>
+		</c:if>
 	</c:forEach>
 	<c:redirect url="../index.jsp"></c:redirect>
-	
-        
 </body>
 </html>
