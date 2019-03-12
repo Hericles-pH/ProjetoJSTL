@@ -14,7 +14,7 @@
 
 	<sql:setDataSource var="conect" driver="com.mysql.jdbc.Driver"
 		url="jdbc:mysql://localhost:3306/JSTL?useSSL=true&serverTimezone=America/Sao_Paulo"
-		user="root" password="wircd123" />
+		user="root" password="hericles" />
 	<sql:query dataSource="${conect}" var="result" >
 		SELECT * FROM USUARIOS WHERE LOGIN = ?
 		<sql:param 	value="${param.usuario}"/>
