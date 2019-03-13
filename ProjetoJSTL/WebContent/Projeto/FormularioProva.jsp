@@ -84,12 +84,12 @@
 				<h1>Inserir IMAGEM</h1>
 				<div class="form-group">
 					<div class="input-group">
-						<input type="file" name="imgBanco" accept="image/*">
+						<input type="file" name="imgBanco" accept="image/*" class="form-control">
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="input-group">
-						<button class="form-control" type="submit">Enviar</button>
+						<button class="form-control" type="submit">Enviar Tudo</button>
 					</div>
 				</div>
 			</div>
