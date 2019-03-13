@@ -79,6 +79,14 @@
 						</textarea>
 					</div>
 				</div>
+			</div>
+			<div id="conteudoProva3">
+				<h1>Inserir IMAGEM</h1>
+				<div class="form-group">
+					<div class="input-group">
+						<input type="file" name="imgBanco" accept="image/*">
+					</div>
+				</div>
 				<div class="form-group">
 					<div class="input-group">
 						<button class="form-control" type="submit">Enviar</button>
