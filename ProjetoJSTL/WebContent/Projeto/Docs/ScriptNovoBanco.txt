@@ -18,9 +18,9 @@ ENGINE = InnoDB;
 CREATE TABLE conteudoProva (
   `cd_cont` INT NOT NULL AUTO_INCREMENT,
   `hashcode` VARCHAR(32) NOT NULL,
-  `questoesProva` VARCHAR(64) NOT NULL,
+  `questoesProva` LONGTEXT NOT NULL,
   `date_hora` DATE NULL,
-  `comentarios` VARCHAR(64) NULL,
+  `comentarios` LONGTEXT NULL,
   `img` BLOB NULL,
   `loginProva_cd_log` INT NOT NULL,
   PRIMARY KEY (`cd_cont`),
