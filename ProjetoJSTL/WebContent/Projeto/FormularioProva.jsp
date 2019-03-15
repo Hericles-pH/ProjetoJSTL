@@ -48,13 +48,12 @@
 							value="Leonardo Gabriel Giacomozzi">
 					</div>
 				</div>
-				<fmt:formatDate type="both" var="hora" dateStyle="short"
-					timeStyle="short" value="${now}" />
+				<fmt:formatDate type="both" var="hora" dateStyle="medium"
+					timeStyle="medium" value="${now}" />
 				<div class="form-group">
 					<div class="input-group">
-						<span class="input-group-addon">Data/Hora Servidor</span> <input
-							type="text" disabled value="${hora}" name="data"
-							class="form-control">
+						<span class="input-group-addon">Data/Hora Servidor</span> 
+						<input type="text" name="dataServ" class="form-control" value="${hora}">
 					</div>
 				</div>
 				<div class="form-group">
@@ -74,9 +73,8 @@
 				<div class="form-group">
 					<div class="input-group">
 						<span class="input-group-addon">Observações</span>
-						<textarea name="coments" required maxlength="32768"
-							class="form-control">
-						</textarea>
+						<textarea name="coments" maxlength="32768"
+							class="form-control" required></textarea>
 					</div>
 				</div>
 			</div>

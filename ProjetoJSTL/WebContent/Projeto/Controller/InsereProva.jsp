@@ -13,10 +13,10 @@
 	<c:catch var="erro">
 		<sql:transaction dataSource="${ conect }">
 			<sql:update var="insereProva">
-			INSERT INTO conteudoProva (hashcode, questoesProva, date_hora, comentarios) VALUES (?, ?, ?, ?);
+			INSERT INTO conteudoProva (hashcode, questoesProva, dataHora, comentarios) VALUES (?, ?, ?, ?);
 				<sql:param value="${ param.hash }" />
 				<sql:param value="${ param.questoes }" />
-				<fmt:parseDate value="${ param.data }" var="dataOK"/>
+				<fmt:parseDate value="${ param.dataServ }" var="dataOK" />
 				<sql:dateParam value="${ dataOK }" />
 				<sql:param value="${ param.coments }" />
 			</sql:update>
