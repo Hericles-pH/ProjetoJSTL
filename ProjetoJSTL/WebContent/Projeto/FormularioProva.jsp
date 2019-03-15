@@ -24,7 +24,7 @@
 </head>
 <body>
 	<div class="container">
-		<form action="../Controller/TesteComentarios.jsp" method="post">
+		<form action="../Projeto/Controller/InsereProva.jsp" method="post">
 			<div id="conteudoProva">
 				<h1>Prova JSTL</h1>
 				<div class="form-group">
@@ -54,7 +54,7 @@
 					<div class="input-group">
 						<span class="input-group-addon">Data/Hora Servidor</span> <input
 							type="text" disabled value="${hora}" name="data"
-							class="form-control"><br>
+							class="form-control">
 					</div>
 				</div>
 				<div class="form-group">
@@ -68,13 +68,13 @@
 			<div id="conteudoProva2">
 				<h1>Conteúdo da Prova</h1>
 				<div class="form-group">
-					<textarea name="questoes" required maxlength="64"
-						class="form-control" rows="20" placeholder="Digite a prova aqui..."></textarea>
+					<textarea name="questoes" required maxlength="65536"
+					class="form-control" rows="20" placeholder="Digite a prova aqui..."></textarea>
 				</div>
 				<div class="form-group">
 					<div class="input-group">
 						<span class="input-group-addon">Observações</span>
-						<textarea name="observacoes" required maxlength="64"
+						<textarea name="coments" required maxlength="32768"
 							class="form-control">
 						</textarea>
 					</div>

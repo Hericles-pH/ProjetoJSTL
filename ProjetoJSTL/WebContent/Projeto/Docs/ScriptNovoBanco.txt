@@ -19,17 +19,10 @@ CREATE TABLE conteudoProva (
   `cd_cont` INT NOT NULL AUTO_INCREMENT,
   `hashcode` VARCHAR(32) NOT NULL,
   `questoesProva` LONGTEXT NOT NULL,
-  `date_hora` DATE NULL,
-  `comentarios` LONGTEXT NULL,
-  `img` BLOB NULL,
-  `loginProva_cd_log` INT NOT NULL,
-  PRIMARY KEY (`cd_cont`),
-  INDEX `fk_conteudoProva_loginProva_idx` (`loginProva_cd_log` ASC) VISIBLE,
-  CONSTRAINT `fk_conteudoProva_loginProva`
-    FOREIGN KEY (`loginProva_cd_log`)
-    REFERENCES `jstl`.`loginProva` (`cd_log`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  `date_hora` DATETIME,
+  `comentarios` LONGTEXT,
+  `img` BLOB,
+  PRIMARY KEY (`cd_cont`))
 ENGINE = InnoDB;
 
 
@@ -38,4 +31,4 @@ insert into loginprova (usuario, senha) values ("Hericles", "123");
 insert into loginprova (usuario, senha) values ("Leonardo", "123");
 insert into loginprova (usuario, senha) values ("Eduardo", "123");
 
-insert into conteudoprova (hashcode, questoesProva, date_hora, comentarios, loginProva_cd_log) values ("dsadsadas2","dsadsa",'20190312',"Tu é foda",1);
+insert into conteudoprova (hashcode, questoesProva, date_hora, comentarios) values ("dsadsadas2","dsadsa",'20190312',"Tu é foda");
