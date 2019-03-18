@@ -53,7 +53,8 @@
 				<div class="form-group">
 					<div class="input-group">
 						<span class="input-group-addon">Data/Hora Servidor</span> 
-						<input type="text" name="dataServ" class="form-control" value="${hora}">
+						<input type="text" name="dataServ" class="form-control" value="${hora}" disabled>
+						<input type="hidden" name="dataBanco" value="${ hora }">
 					</div>
 				</div>
 				<div class="form-group">

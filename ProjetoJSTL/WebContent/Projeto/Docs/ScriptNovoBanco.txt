@@ -19,7 +19,7 @@ CREATE TABLE conteudoProva (
   `cd_cont` INT NOT NULL AUTO_INCREMENT,
   `hashcode` VARCHAR(32) NOT NULL,
   `questoesProva` LONGTEXT NOT NULL,
-  `dataHora` DATETIME NOT NULL,
+  `dataHora` VARCHAR(20) NOT NULL,
   `comentarios` LONGTEXT,
   `img` BLOB,
   PRIMARY KEY (`cd_cont`))
@@ -30,5 +30,3 @@ insert into loginprova (usuario, senha) values ("Danton", "123");
 insert into loginprova (usuario, senha) values ("Hericles", "123");
 insert into loginprova (usuario, senha) values ("Leonardo", "123");
 insert into loginprova (usuario, senha) values ("Eduardo", "123");
-
-insert into conteudoprova (hashcode, questoesProva, dataHora, comentarios) values ("dsadsadas2","dsadsa",'2019-03-12 15:30:56',"Tu é foda");

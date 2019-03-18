@@ -16,8 +16,7 @@
 			INSERT INTO conteudoProva (hashcode, questoesProva, dataHora, comentarios) VALUES (?, ?, ?, ?);
 				<sql:param value="${ param.hash }" />
 				<sql:param value="${ param.questoes }" />
-				<fmt:parseDate value="${ param.dataServ }" var="dataOK" />
-				<sql:dateParam value="${ dataOK }" />
+				<sql:param value="${ param.dataBanco }"/>
 				<sql:param value="${ param.coments }" />
 			</sql:update>
 		</sql:transaction>
