@@ -94,5 +94,9 @@
 			</div>
 		</form>
 	</div>
+
+<form action="../../src/Inicio/DownloadFileServlet.java">
+	<input type="submit">
+</form>
 </body>
 </html>
