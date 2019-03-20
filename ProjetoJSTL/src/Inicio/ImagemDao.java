@@ -1,7 +1,9 @@
 package Inicio;
 
+import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.Statement;
 
 
@@ -35,7 +37,7 @@ private static Connection conn = null;
 	
 	
 	
-	public boolean insere(Categoria objeto) throws DaoException, ConexaoException {
+	public boolean insere(String objeto) throws Exception {
 		Connection conexao = abreConexao();
 		try {
 			PreparedStatement pst = conexao.prepareStatement(

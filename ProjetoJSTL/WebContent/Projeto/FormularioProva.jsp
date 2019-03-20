@@ -24,7 +24,7 @@
 </head>
 <body>
 	<div class="container">
-		<form action="../Projeto/Controller/InsereProva.jsp" method="post">
+		<form action="../Projeto/Controller/InsereProva.jsp" method="post" enctype="multipart-formData">
 			<div id="conteudoProva">
 				<h1>Prova JSTL</h1>
 				<div class="form-group">
