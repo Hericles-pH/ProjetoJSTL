@@ -5,7 +5,7 @@
 <head>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <meta charset="ISO-8859-1">
 <title>Processando</title>
 </head>
@@ -16,7 +16,7 @@
 			INSERT INTO conteudoProva (hashcode, questoesProva, dataHora, comentarios) VALUES (?, ?, ?, ?);
 				<sql:param value="${ param.hash }" />
 				<sql:param value="${ param.questoes }" />
-				<sql:param value="${ param.dataBanco }"/>
+				<sql:param value="${ param.dataBanco }" />
 				<sql:param value="${ param.coments }" />
 			</sql:update>
 		</sql:transaction>

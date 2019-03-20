@@ -94,8 +94,8 @@
 			</div>
 		</form>
 	</div>
-
-<form action="../../src/Inicio/DownloadFileServlet.java">
+<c:url value="/Download" var="dowload" />
+<form action="${download }">
 	<input type="submit">
 </form>
 </body>
