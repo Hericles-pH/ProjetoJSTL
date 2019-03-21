@@ -14,11 +14,11 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
-    <servlet-name>ZipDownloadServlet</servlet-name>
-    <servlet-class>org.kodejava.example.servlet.ZipDownloadServlet</servlet-class>
+    <servlet-name>UploadImagem</servlet-name>
+    <servlet-class>src.Inicio.UploadImagem</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>ZipDownloadServlet</servlet-name>
-    <url-pattern>/zipservlet</url-pattern>
+    <servlet-name>UploadImagem</servlet-name>
+    <url-pattern>/Upload</url-pattern>
   </servlet-mapping>
 </web-app>

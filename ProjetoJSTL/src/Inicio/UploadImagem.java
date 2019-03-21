@@ -18,8 +18,8 @@ public class UploadImagem extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
-    	String file = request.getParameter("");
-    	
+    	String file = request.getParameter("fielUpload");
+    	System.out.println(file);
     	
     
     

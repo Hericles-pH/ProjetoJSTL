@@ -17,8 +17,35 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="Styles//styleProva.css">
-<script type="text/javascript" src="Scripts/UploadImg.js"></script>
 
+<script>
+function upload(){
+	
+	var target = $("#teste");
+	alert(target);
+	var file = $("#input");
+	alert(file);
+	var reader = new FileReader();
+	
+	reader.onloadend = function(){
+	alert(reader.result);	
+		target.src = reader.result;
+		//Upload Imagem via ajax
+		$.ajax({
+			method : "POST",
+			url : "/Upload",	
+			data : { fielUpload: reader.result }	
+		}).done	(function(response) {
+			alert("Sucesso");
+		}).fail(function(xhr, status, erroThrown) {
+			alert("Erro: "+xhr.responseText);
+		})
+	}
+	
+	
+
+}
+</script>
 <meta charset="ISO-8859-1">
 <title>Prova JSTL</title>
 <jsp:useBean id="now" class="java.util.Date" />
