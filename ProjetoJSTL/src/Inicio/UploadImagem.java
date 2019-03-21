@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(description = "Download", urlPatterns = { "/Download" })
-public class DownloadFileServlet extends HttpServlet {
+@WebServlet(description = "Upload", urlPatterns = { "/Upload" })
+public class UploadImagem extends HttpServlet {
 
     /**
 	 * 

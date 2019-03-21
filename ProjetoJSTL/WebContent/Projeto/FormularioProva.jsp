@@ -17,6 +17,8 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="Styles//styleProva.css">
+<script type="text/javascript" src="Scripts/UploadImg.js"></script>
+
 <meta charset="ISO-8859-1">
 <title>Prova JSTL</title>
 <jsp:useBean id="now" class="java.util.Date" />
@@ -83,20 +85,20 @@
 				<h1>Inserir IMAGEM</h1>
 				<div class="form-group">
 					<div class="input-group">
-						<input type="file" name="imgBanco" accept="image/*" class="form-control">
+						<input type="file" name="imgBanco" accept="image/*" class="form-control" onchange="upload();" id="input">
 					</div>
+				</div>
+				<div>
+					<img src="" name="imagem" width="200px" height="200px" id="teste">
 				</div>
 				<div class="form-group">
 					<div class="input-group">
-						<button class="form-control" type="submit">Enviar Tudo</button>
+						<button class="form-control" type="submit" id="enviar">Enviar Tudo</button>
 					</div>
 				</div>
 			</div>
 		</form>
 	</div>
-<c:url value="/Download" var="dowload" />
-<form action="${download }">
-	<input type="submit">
-</form>
+
 </body>
 </html>
