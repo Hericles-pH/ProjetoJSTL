@@ -17,7 +17,7 @@ public class AvaliacaoDAO {
 
 	
 	private static AvaliacaoBean constroi(ResultSet rs) throws SQLException, IOException {
-		AvaliacaoBean prova = new AvaliacaoBean(rs.getString("hash"),
+		AvaliacaoBean prova = new AvaliacaoBean(rs.getString("hashcode"),
 		new String(rs.getBytes("img"), StandardCharsets.UTF_8));
 		return prova;
 	}
@@ -50,13 +50,13 @@ public class AvaliacaoDAO {
 	public Map<String, String> consultaTodos() throws Exception {
 		Connection conexao = Conexao.abreConexao();
 		Statement st = conexao.createStatement();
-		ResultSet rs = st.executeQuery("SELECT * FROM conteudoprova;");
+		ResultSet rs = st.executeQuery("SELECT * FROM conteudoprova ORDER BY cd_cont DESC LIMIT 1;");
 		AvaliacaoBean prova;
 		Map<String, String> provas = new HashMap<String, String>();
 		try {
 			while (rs.next()) {
 				prova= constroi(rs);
-				provas.put(prova.getIdProva(), prova.getImg());
+				provas.put("pk", prova.getImg());
 			}
 		} finally {
 			Conexao.fechaConexao();

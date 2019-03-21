@@ -39,7 +39,7 @@ public class DownloadFile extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		request.getRequestDispatcher("").forward(request, response);
+		request.getRequestDispatcher("Projeto/view.jsp").forward(request, response);
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
