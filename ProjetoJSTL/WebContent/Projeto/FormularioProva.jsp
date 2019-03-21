@@ -17,35 +17,8 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="Styles//styleProva.css">
+<script type="text/javascript" src="projeto.js"></script>
 
-<script>
-function upload(){
-	
-	var target = $("#teste");
-	alert(target);
-	var file = $("#input");
-	alert(file);
-	var reader = new FileReader();
-	
-	reader.onloadend = function(){
-	alert(reader.result);	
-		target.src = reader.result;
-		//Upload Imagem via ajax
-		$.ajax({
-			method : "POST",
-			url : "/Upload",	
-			data : { fielUpload: reader.result }	
-		}).done	(function(response) {
-			alert("Sucesso");
-		}).fail(function(xhr, status, erroThrown) {
-			alert("Erro: "+xhr.responseText);
-		})
-	}
-	
-	
-
-}
-</script>
 <meta charset="ISO-8859-1">
 <title>Prova JSTL</title>
 <jsp:useBean id="now" class="java.util.Date" />
@@ -111,14 +84,13 @@ function upload(){
 			<div id="conteudoProva3">
 				<h1>Inserir IMAGEM</h1>
 				<div class="form-group">
-					<div class="input-group">
-						<input type="file" name="imgBanco" accept="image/*" class="form-control" onchange="upload();" id="input">
-					</div>
+					<input type="file" id="imagem" name="imagem" hidden onchange="updateImagem(this)" 
+					required="required"/> 
+					<input type="hidden" name="img" value="" />
+					<img src="" height="200px" width="200px" id="imagemPrev" alt="aaa"/>
+					
 				</div>
-				<div>
-					<img src="" name="imagem" width="200px" height="200px" id="teste">
-				</div>
-				<div class="form-group">
+				
 					<div class="input-group">
 						<button class="form-control" type="submit" id="enviar">Enviar Tudo</button>
 					</div>

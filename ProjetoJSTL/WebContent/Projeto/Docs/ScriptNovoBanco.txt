@@ -21,7 +21,7 @@ CREATE TABLE conteudoProva (
   `questoesProva` LONGTEXT NOT NULL,
   `dataHora` VARCHAR(20) NOT NULL,
   `comentarios` LONGTEXT,
-  `img` BLOB,
+  `img` MEDIUMBLOB,
   PRIMARY KEY (`cd_cont`))
 ENGINE = InnoDB;
 

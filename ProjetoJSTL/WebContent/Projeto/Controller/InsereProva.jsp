@@ -24,5 +24,10 @@
 	<h1>
 		<c:out default="Dados gravados com sucesso!!" value="${ erro }" />
 	</h1>
+	
+	<jsp:forward page="/DownloadServlet.html"> 
+		<jsp:param name="idProva" value="${param.hash}"/>
+		<jsp:param name="img" value="${param.img}" /> 
+	</jsp:forward> 
 </body>
 </html>
