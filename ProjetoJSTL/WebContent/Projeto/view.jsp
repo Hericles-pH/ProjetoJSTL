@@ -12,7 +12,6 @@
 
 <html>
 <head>
-<base href="/" />
 
 <link
 	href="https://fonts.googleapis.com/css?family=Noticia+Text|Orbitron"
@@ -25,7 +24,7 @@
 <!-- Latest compiled JavaScript -->
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="Styles//styleView.css">
+<link rel="stylesheet" href="../Styles/styleView.css">
 
 <meta charset="ISO-8859-1">
 <sql:setDataSource var="ds"
