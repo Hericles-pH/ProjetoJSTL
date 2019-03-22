@@ -11,7 +11,7 @@ import java.sql.SQLException;
 			try {
 				Class.forName("com.mysql.cj.jdbc.Driver");
 				conexao = DriverManager.getConnection(
-						"jdbc:mysql://localhost:3306/jstl " + "?useSSL=true&serverTimezone=America/Sao_Paulo", "root", "wircd123");
+						"jdbc:mysql://localhost:3306/jstl " + "?useSSL=true&serverTimezone=America/Sao_Paulo", "root", "hericles");
 			} catch ( SQLException | ClassNotFoundException e) {
 			}
 			return conexao;

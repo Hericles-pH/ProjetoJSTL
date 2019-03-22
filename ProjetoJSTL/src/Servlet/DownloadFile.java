@@ -34,7 +34,6 @@ public class DownloadFile extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
-			System.out.println(request.getParameter("idProva"));
 			dao.update(new AvaliacaoBean(request.getParameter("idProva"), request.getParameter("img")));
 		} catch (Exception e) {
 			e.printStackTrace();

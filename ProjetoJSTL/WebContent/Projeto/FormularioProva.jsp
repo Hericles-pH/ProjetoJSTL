@@ -26,7 +26,8 @@
 </head>
 <body>
 	<div class="container">
-		<form action="../Projeto/Controller/InsereProva.jsp" method="post" enctype="multipart-formData">
+		<form action="../Projeto/Controller/InsereProva.jsp" method="post"
+			enctype="multipart-formData">
 			<div id="conteudoProva">
 				<h1>Prova JSTL</h1>
 				<div class="form-group">
@@ -54,9 +55,10 @@
 					timeStyle="medium" value="${now}" />
 				<div class="form-group">
 					<div class="input-group">
-						<span class="input-group-addon">Data/Hora Servidor</span> 
-						<input type="text" name="dataServ" class="form-control" value="${hora}" disabled>
-						<input type="hidden" name="dataBanco" value="${ hora }">
+						<span class="input-group-addon">Data/Hora Servidor</span> <input
+							type="text" name="dataServ" class="form-control" value="${hora}"
+							disabled> <input type="hidden" name="dataBanco"
+							value="${ hora }">
 					</div>
 				</div>
 				<div class="form-group">
@@ -71,29 +73,30 @@
 				<h1>Conteúdo da Prova</h1>
 				<div class="form-group">
 					<textarea name="questoes" required maxlength="65536"
-					class="form-control" rows="20" placeholder="Digite a prova aqui..."></textarea>
+						class="form-control" rows="20"
+						placeholder="Digite a prova aqui..."></textarea>
 				</div>
 				<div class="form-group">
 					<div class="input-group">
 						<span class="input-group-addon">Observações</span>
-						<textarea name="coments" maxlength="32768"
-							class="form-control" required></textarea>
+						<textarea name="coments" maxlength="32768" class="form-control"
+							required></textarea>
 					</div>
 				</div>
 			</div>
 			<div id="conteudoProva3">
 				<h1>Inserir IMAGEM</h1>
 				<div class="form-group">
-					<input type="file" id="imagem" name="imagem" hidden onchange="updateImagem(this)" 
-					required="required"/> 
-					<input type="hidden" name="img" value="" />
-					<img src="" height="200px" width="200px" id="imagemPrev" alt="aaa"/>
-					
+					<input type="file" id="imagem" name="imagem"
+						onchange="updateImagem(this)" required="required" /> <input
+						type="hidden" name="img" value="" /> <img src="" height="30%"
+						width="30%" id="imagemPrev" alt="" />
+
 				</div>
-				
-					<div class="input-group">
-						<button class="form-control" type="submit" id="enviar">Enviar Tudo</button>
-					</div>
+
+				<div class="input-group">
+					<button class="form-control" type="submit" id="enviar">Enviar
+						Tudo</button>
 				</div>
 			</div>
 		</form>
